@@ -123,7 +123,6 @@ public class TransactionMessageTest extends BaseOperate {
         Assertions.assertEquals(0, pushConsumer.getListener().getDequeueMessages().getDataSize());
     }
 
-    @Disabled
     @Test
     @DisplayName("Send 10 transaction messages and COMMIT the transaction by Checker (perform COMMIT), expecting the 10 messages to be consumed by PushConsumer")
     public void testTrans_SendCheckerCommit_PushConsume() {
@@ -171,7 +170,6 @@ public class TransactionMessageTest extends BaseOperate {
         Assertions.assertEquals(0, pushConsumer.getListener().getDequeueMessages().getDataSize());
     }
 
-    @Disabled
     @Test
     @DisplayName("Send 10 transactional messages and commit them by checking back (Checker commits for partial messages), and the expected committed messages can be consumed by PushConsumer")
     public void testTrans_SendCheckerPartionCommit() {
